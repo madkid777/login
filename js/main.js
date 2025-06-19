@@ -64,6 +64,10 @@ var logout = document.querySelector(".logout")
 function login() {
     var email = signEmail.value
     var password = signPassword.value
+    if (signEmail.value == "" || signPassword.value == "") {
+        signMassge.classList.remove("d-none")
+        return;
+    }
     for (var i = 0; i < accounts.length; i++) {
         if (accounts[i].email === email && accounts[i].password === password) {
             localStorage.setItem("loggedUser", accounts[i].username)
