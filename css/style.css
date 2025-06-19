@@ -1,0 +1,55 @@
+.main-color {
+    color: #17A2B8;
+}
+
+body {
+    background-color: #24353F;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+input {
+    border: 1px solid #ced4da;
+    background-color: transparent;
+    color: #ced4da;
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+}
+
+input:focus {
+    border-color: #17A2B8;
+}
+
+.box a:hover {
+    text-decoration: underline;
+}
+
+.btn-outline-blue {
+    border: 1px solid #17A2B8;
+    color: #17A2B8;
+}
+
+.btn-outline-blue:hover {
+    background-color: #17A2B8;
+    color: white;
+
+}
+
+.bigbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-name {
+    width: 500px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
