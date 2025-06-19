@@ -60,7 +60,7 @@ var signPassword = document.querySelector(".signPassword")
 var loginButton = document.querySelector(".login")
 var middleBox = document.querySelector(".box-name")
 var logout = document.querySelector(".logout")
-
+//login
 function login() {
     var email = signEmail.value
     var password = signPassword.value
