@@ -71,7 +71,7 @@ function login() {
     for (var i = 0; i < accounts.length; i++) {
         if (accounts[i].email === email && accounts[i].password === password) {
             localStorage.setItem("loggedUser", accounts[i].username)
-            location.assign("/logoutpage.html")
+            location.assign("./logoutpage.html")
             return;
         } else {
             signMassge.classList.remove("d-none")
@@ -88,6 +88,6 @@ if (loginButton) {
 }
 if (logout) {
     logout.addEventListener("click", function () {
-        location.assign("/index.html")
+        location.assign("./index.html")
     })
 }
