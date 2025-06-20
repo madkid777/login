@@ -74,7 +74,11 @@ function login() {
             localStorage.setItem("loggedUser", accounts[i].username)
             location.assign("./logoutpage.html")
             return;
-        } else if (accounts[i].email !== email && accounts[i].password === password) {
+        } else if (email === "" || password === "") {
+            signMassge.classList.remove("d-none")
+            return;
+        }
+        else if (accounts[i].email !== email && accounts[i].password === password) {
             inputError.innerHTML = "email error"
             inputError.classList.remove("d-none")
             return;
@@ -83,9 +87,7 @@ function login() {
             inputError.classList.remove("d-none")
             return;
         }
-        else if (email === "" || password === "") {
-            signMassge.classList.remove("d-none")
-        }
+
     }
 }
 var userName = localStorage.getItem("loggedUser");
