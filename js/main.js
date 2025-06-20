@@ -60,6 +60,7 @@ var signPassword = document.querySelector(".signPassword")
 var loginButton = document.querySelector(".login")
 var middleBox = document.querySelector(".box-name")
 var logout = document.querySelector(".logout")
+var inputError = document.querySelector(".inputError")
 //login
 function login() {
     var email = signEmail.value
@@ -73,7 +74,16 @@ function login() {
             localStorage.setItem("loggedUser", accounts[i].username)
             location.assign("./logoutpage.html")
             return;
-        } else {
+        } else if (accounts[i].email !== email && accounts[i].password === password) {
+            inputError.innerHTML = "email error"
+            inputError.classList.remove("d-none")
+            return;
+        } else if (accounts[i].email === email && accounts[i].password !== password) {
+            inputError.innerHTML = "password error"
+            inputError.classList.remove("d-none")
+            return;
+        }
+        else if (email === "" || password === "") {
             signMassge.classList.remove("d-none")
         }
     }
